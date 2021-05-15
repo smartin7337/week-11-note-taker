@@ -16,6 +16,10 @@ app.get("/notes", function (request, response) {
   response.sendFile(`${__dirname}/public/notes.html`);
 });
 
+app.get("/api/notes", function (request, response) {
+  response.json(notesDB);
+});
+
 app.listen(port, () => {
   console.log(`Listening to port ${port}.`);
 });
