@@ -9,11 +9,11 @@ app.use(express.json());
 app.use(express.static("./public"));
 
 app.get("/", function (request, response) {
-  response.sendFile("./public/index.html");
+  response.sendFile(`${__dirname}/public/index.html`);
 });
 
 app.get("/notes", function (request, response) {
-  response.sendFile("./public/notes.html");
+  response.sendFile(`${__dirname}/public/notes.html`);
 });
 
 app.listen(port, () => {
